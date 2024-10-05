@@ -123,8 +123,6 @@ ucebolunenlerintoplami = ucetambolunenler.reduce((total, num) => total + num, 0)
 
 // 3d çözümü
 
-/* kodlar buraya */
-//besyuzdenkucuksayilar = [];
 besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
 
 // 3e çözümü
