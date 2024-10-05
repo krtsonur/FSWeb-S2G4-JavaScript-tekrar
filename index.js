@@ -50,8 +50,8 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(radius) {
+  return 2 * radius * pi;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -64,8 +64,8 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(radius) {
+  return radius * radius * pi;
 }
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
@@ -98,28 +98,55 @@ let ucetambolunenler,
   tekraredensayilar;
 
 // 3a çözümü
-
-/* kodlar buraya */
+enbuyuk = sayilar[0];
+enkucuk = sayilar[0];
+for(let i = 1; i < sayilar.length; i++){
+  if(sayilar[i] > enbuyuk){
+    enbuyuk = sayilar[i];
+  }
+  if(sayilar[i] < enkucuk){
+    enkucuk = sayilar[i];
+  }
+}
 
 // 3b çözümü:
+ucetambolunenler = [];
 
-/* kodlar buraya */
+sayilar.forEach((sayi) => {
+if(!(sayi%3)){}
+ucetambolunenler.push(sayi);
+});
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce((total, num) => total + num, 0);
 
 // 3d çözümü
 
 /* kodlar buraya */
+//besyuzdenkucuksayilar = [];
+besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi < 500);
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = [...besyuzdenkucuksayilar];
+siralisayilar.sort((a, b) => a-b);
 
 // 3f çözümü
 
-/* kodlar buraya */
+sayilar.sort((a, b) => a-b);
+
+tekraredensayilar = [];
+let tekrarCount = 1;
+for(let i = 1; i < sayilar.length; i++){
+  if(sayilar[i] === sayilar[i-1] ){
+    tekrarCount++;
+  }
+  else{
+    tekraredensayilar.push(`${sayilar[i-1]} sayısı ${tekrarCount} tekrar edilmiştir`);
+    tekrarCount = 1;
+  }
+}
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
