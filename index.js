@@ -141,7 +141,9 @@ for(let i = 1; i < sayilar.length; i++){
     tekrarCount++;
   }
   else{
-    tekraredensayilar.push(`${sayilar[i-1]} sayısı ${tekrarCount} tekrar edilmiştir`);
+    if(tekrarCount !== 1){
+      tekraredensayilar.push(`${sayilar[i-1]} sayısı ${tekrarCount} tekrar edilmiştir`);
+    }
     tekrarCount = 1;
   }
 }
